@@ -1,0 +1,63 @@
+@use "variable.scss" as *;
+@use "respons.scss" as *;
+
+@import url("https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  
+}
+.btn{
+border-radius: 30px;
+border:none;
+}
+.r5{
+    border-radius: 5px;
+}
+.pd-250 {
+  padding-left: 250px;
+  padding-right: 240px;
+@include xxl{
+  padding-left: 100px;
+  padding-right: 100px;
+}
+@include lg{
+  padding-left: 50px;
+  padding-right: 50px;
+}
+}
+.icon-r45 {
+  transform: rotate(-90deg);
+}
+.t-blue {
+  color: $second-text !important;
+}
+.t-red {
+  color: $red-color !important;
+}
+.t-green {
+  color: $third-text !important;
+}
+.t-green-light {
+
+  color:rgba(23, 240, 132, 1)
+}
+.none-active{
+  display: none !important;
+}
+.active{
+  display: block !important;
+}
+@mixin flexCenter($justify: center, $align: center, $direction: row) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+  flex-direction: $direction;
+}
+@mixin textSize($weight: 400, $size: 18px, $lineHeight : 16.25px) {
+    font-family: "Bai Jamjuree",sans-serif;
+    font-size: $size ;
+    line-height: $lineHeight ;
+    font-weight: $weight;
+}

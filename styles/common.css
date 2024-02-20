@@ -1,0 +1,59 @@
+@import url("https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+.btn {
+  border-radius: 30px;
+  border: none;
+}
+
+.r5 {
+  border-radius: 5px;
+}
+
+.pd-250 {
+  padding-left: 250px;
+  padding-right: 240px;
+}
+@media screen and (max-width: 1290px) {
+  .pd-250 {
+    padding-left: 100px;
+    padding-right: 100px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .pd-250 {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+}
+
+.icon-r45 {
+  transform: rotate(-90deg);
+}
+
+.t-blue {
+  color: #2B38D1 !important;
+}
+
+.t-red {
+  color: #DC323C !important;
+}
+
+.t-green {
+  color: #008A00 !important;
+}
+
+.t-green-light {
+  color: rgb(23, 240, 132);
+}
+
+.none-active {
+  display: none !important;
+}
+
+.active {
+  display: block !important;
+}
