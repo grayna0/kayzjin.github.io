@@ -2,6 +2,7 @@
 * {
   box-sizing: border-box;
   margin: 0;
+  color: #212529;
 }
 
 .btn {
@@ -88,7 +89,7 @@
   }
 }
 .main .top__link .notification {
-  color: rgba(81, 93, 102, 0.4196078431);
+  color: rgba(81, 93, 102, 0.8274509804);
 }
 .main .top__link .notification strong {
   font-family: "Bai Jamjuree", sans-serif;
@@ -201,7 +202,7 @@
   height: 20px;
   top: 20%;
   right: -20px;
-  color: rgba(81, 93, 102, 0.4196078431);
+  color: rgba(81, 93, 102, 0.8274509804);
 }
 .main .header__sreach .input {
   flex: 60%;
@@ -615,7 +616,7 @@
   font-size: 12px;
   line-height: 15px;
   font-weight: 500;
-  color: rgba(81, 93, 102, 0.4196078431);
+  color: rgba(81, 93, 102, 0.8274509804);
 }
 .main .container .products .product-item .product__text .price {
   font-family: "Bai Jamjuree", sans-serif;
@@ -630,7 +631,7 @@
   font-size: 11px;
   line-height: 13.5px;
   font-weight: 400;
-  color: rgba(81, 93, 102, 0.4196078431);
+  color: rgba(81, 93, 102, 0.8274509804);
 }
 .main .container .products .product-item .product__text .quantity .instock {
   font-family: "Bai Jamjuree", sans-serif;
@@ -642,7 +643,7 @@
   color: #212529;
 }
 .main .container .products .product-item .product__text .quantity .instock span {
-  color: rgba(81, 93, 102, 0.4196078431);
+  color: rgba(81, 93, 102, 0.8274509804);
 }
 .main .container .products .product-item:nth-child(3) {
   width: 466px;
@@ -676,7 +677,7 @@
   font-size: 16px;
   line-height: 20px;
   font-weight: 700;
-  border-bottom: 1px solid rgba(81, 93, 102, 0.4196078431);
+  border-bottom: 1px solid rgba(81, 93, 102, 0.8274509804);
   padding-bottom: 0.8rem;
   letter-spacing: 0.5px;
 }
@@ -728,7 +729,7 @@
 .main .container .products .product-item:nth-child(3) .device {
   position: relative;
   height: 5px;
-  background-color: rgba(81, 93, 102, 0.4196078431);
+  background-color: rgba(81, 93, 102, 0.8274509804);
   margin: 1.3rem 0 0.5rem 0;
   border-radius: 30px;
 }
@@ -821,7 +822,7 @@
   max-width: 70%;
   padding: 1rem 2rem;
   border-radius: 50px;
-  border: 1px solid rgba(81, 93, 102, 0.4196078431);
+  border: 1px solid rgba(81, 93, 102, 0.8274509804);
 }
 .main footer .col .btn__sub .btn__sub-blue {
   background-color: #2B38D1;
@@ -839,7 +840,7 @@
   font-weight: 500;
   padding-top: 2.5rem;
   padding-bottom: 2rem;
-  border-top: 1px solid rgba(81, 93, 102, 0.4196078431);
+  border-top: 1px solid rgba(81, 93, 102, 0.8274509804);
 }
 @media screen and (max-width: 1024px) {
   .main .copyright {

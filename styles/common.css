@@ -2,6 +2,7 @@
 * {
   box-sizing: border-box;
   margin: 0;
+  color: #212529;
 }
 
 .btn {
@@ -17,7 +18,7 @@
   padding-left: 250px;
   padding-right: 240px;
 }
-@media screen and (max-width: 1290px) {
+@media screen and (max-width: 1500px) {
   .pd-250 {
     padding-left: 100px;
     padding-right: 100px;
