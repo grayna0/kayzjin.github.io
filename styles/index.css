@@ -17,7 +17,7 @@
   padding-left: 250px;
   padding-right: 240px;
 }
-@media screen and (max-width: 1290px) {
+@media screen and (max-width: 1500px) {
   .pd-250 {
     padding-left: 100px;
     padding-right: 100px;
@@ -244,7 +244,7 @@
 .main .header__right .box-img .icon {
   position: relative;
 }
-@media screen and (max-width: 1290px) {
+@media screen and (max-width: 1500px) {
   .main .header__right .box-img .icon {
     width: 18px;
   }
@@ -270,7 +270,7 @@
   line-height: 16.25px;
   font-weight: 700;
 }
-@media screen and (max-width: 1290px) {
+@media screen and (max-width: 1500px) {
   .main .header__right .box-img .icon .badge {
     width: 10px;
     height: 10px;
@@ -288,7 +288,7 @@
   line-height: 17.25px;
   font-weight: 600;
 }
-@media screen and (max-width: 1290px) {
+@media screen and (max-width: 1500px) {
   .main .header__right .box-img .text-lagre {
     font-family: "Bai Jamjuree", sans-serif;
     font-size: 12px;
@@ -535,9 +535,14 @@
   grid-template-columns: auto auto auto auto auto auto auto;
   gap: 0.3rem;
 }
-@media screen and (max-width: 1290px) {
+@media screen and (max-width: 1500px) {
   .main .container .products {
     grid-template-columns: auto auto auto auto;
+  }
+}
+@media screen and (max-width: 1290px) {
+  .main .container .products {
+    grid-template-columns: auto auto auto;
   }
 }
 @media screen and (max-width: 768px) {
@@ -546,10 +551,14 @@
   }
 }
 .main .container .products .product-item {
-  width: 231px;
   height: 373px;
   padding: 1rem 1.5rem;
   background-color: rgb(255, 255, 255);
+}
+@media screen and (max-width: 1500px) {
+  .main .container .products .product-item {
+    width: 100%;
+  }
 }
 @media screen and (max-width: 768px) {
   .main .container .products .product-item {
@@ -573,6 +582,7 @@
   padding: 3px 10px;
 }
 .main .container .products .product-item .product__text {
+  width: 231px;
   margin-top: 0.8rem;
 }
 .main .container .products .product-item .product__text .title {
@@ -625,10 +635,11 @@
   grid-row: 1/span 2;
   padding: 2rem 2.5rem;
 }
-@media screen and (max-width: 1290px) {
+@media screen and (max-width: 1500px) {
   .main .container .products .product-item:nth-child(3) {
-    grid-column: 1/span 4;
+    grid-column: 1/span 2;
     grid-row: 1/span 2;
+    width: 100%;
   }
 }
 @media screen and (max-width: 1290px) {
@@ -734,8 +745,32 @@
   padding-bottom: 2rem;
   gap: 3rem;
 }
+@media screen and (max-width: 1024px) {
+  .main footer {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
 .main footer .col {
   max-width: 438px;
+}
+@media screen and (max-width: 1024px) {
+  .main footer .col {
+    width: 40%;
+  }
+  .main footer .col:nth-child(4) {
+    order: 2;
+  }
+  .main footer .col:nth-child(2) {
+    order: 4;
+    text-align: end;
+  }
+  .main footer .col:nth-child(3) {
+    text-align: end;
+  }
 }
 .main footer .col__header {
   margin-bottom: 1.4rem;
@@ -778,6 +813,10 @@
   color: white;
 }
 .main .copyright {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
   font-family: "Bai Jamjuree", sans-serif;
   font-size: 14px;
   line-height: 17.5px;
@@ -785,6 +824,14 @@
   padding-top: 2.5rem;
   padding-bottom: 2rem;
   border-top: 1px solid rgba(81, 93, 102, 0.4196078431);
+}
+@media screen and (max-width: 1024px) {
+  .main .copyright {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
 }
 .main .menu-mobile {
   position: absolute;

@@ -310,18 +310,26 @@
       display: grid;
       grid-template-columns: auto auto auto auto auto auto auto;
       gap: 0.3rem;
-      @include xl {
-        grid-template-columns: auto auto auto auto;
+      @include xxl {
+        grid-template-columns: auto auto auto auto  ;
       }
+      @include xl {
+        grid-template-columns: auto auto auto ;
+      }
+
       @include md {
         grid-template-columns: auto;
       }
 
       .product-item {
-        width: 231px;
         height: 373px;
+        
         padding: 1rem 1.5rem;
         background-color: rgb(255, 255, 255);
+        @include xxl {
+          width: 100%;
+          
+        }
         @include md {
           width: 100%;
         }
@@ -339,6 +347,8 @@
           }
         }
         .product__text {
+        width: 231px;
+
           margin-top: 0.8rem;
           .title {
             @include textSize(600, 14px, 18px);
@@ -379,8 +389,10 @@
           grid-row: 1 / span 2;
           padding: 2rem 2.5rem;
           @include xxl {
-            grid-column: 1 / span 4;
+            grid-column: 1 / span 2;
             grid-row: 1 / span 2;
+             width: 100%;
+                
           }
 
           @include xl {
@@ -470,8 +482,29 @@
     padding-top: 3.7rem;
     padding-bottom: 2rem;
     gap: 3rem;
+    @include lg {
+    @include flexCenter(center, flex-start);
+
+     flex-wrap: wrap;
+
+      }
+
     .col {
       max-width: 438px;
+      @include lg {
+      width: 40%;
+      &:nth-child(4){
+        order: 2;
+      }
+      &:nth-child(2){
+        order: 4;
+        text-align: end;
+      }
+      &:nth-child(3){
+        text-align: end;
+      }
+      }
+
       &__header {
         margin-bottom: 1.4rem;
         @include textSize(700, 14px, 17.5px);
@@ -510,10 +543,15 @@
     }
   }
   .copyright {
+    @include flexCenter(space-between,center);
     @include textSize(500, 14px, 17.5px);
     padding-top: 2.5rem;
     padding-bottom: 2rem;
     border-top: 1px solid $gray-text;
+    @include lg{
+      @include flexCenter(center,center,$direction:column);
+
+    }
   }
   .menu-mobile{
     .list__item{
