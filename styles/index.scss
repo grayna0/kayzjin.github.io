@@ -385,7 +385,7 @@
             color: $red-color;
             margin-bottom: 0.8rem;
             s {
-              @include textSize(400, 11px, 13.5px);
+              @include textSize(600, 11px, 13.5px);
               color: $gray-text;
             }
           }

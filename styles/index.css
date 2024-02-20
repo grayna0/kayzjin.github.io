@@ -2,7 +2,7 @@
 * {
   box-sizing: border-box;
   margin: 0;
-  color: #212529;
+  color: rgba(33, 37, 41, 0.8470588235);
 }
 
 .btn {
@@ -40,7 +40,7 @@
 }
 
 .t-red {
-  color: #DC323C !important;
+  color: #e20c1a !important;
 }
 
 .t-green {
@@ -89,14 +89,14 @@
   }
 }
 .main .top__link .notification {
-  color: rgba(81, 93, 102, 0.8274509804);
+  color: #515d66;
 }
 .main .top__link .notification strong {
   font-family: "Bai Jamjuree", sans-serif;
   font-size: 12.5px;
   line-height: 16.25px;
   font-weight: 700;
-  color: #212529;
+  color: rgba(33, 37, 41, 0.8470588235);
   text-decoration: underline;
 }
 .main .top__link .top__link_right {
@@ -202,7 +202,7 @@
   height: 20px;
   top: 20%;
   right: -20px;
-  color: rgba(81, 93, 102, 0.8274509804);
+  color: #515d66;
 }
 .main .header__sreach .input {
   flex: 60%;
@@ -278,7 +278,7 @@
   position: absolute;
   width: 15px;
   height: 15px;
-  background-color: #DC323C;
+  background-color: rgba(220, 50, 61, 0.8784313725);
   border-radius: 100%;
   top: -5px;
   right: -5px;
@@ -594,7 +594,7 @@
   position: absolute;
   top: 4px;
   left: 2px;
-  background-color: #DC323C;
+  background-color: rgba(220, 50, 61, 0.8784313725);
   color: white;
   padding: 3px 10px;
 }
@@ -616,22 +616,22 @@
   font-size: 12px;
   line-height: 15px;
   font-weight: 500;
-  color: rgba(81, 93, 102, 0.8274509804);
+  color: #515d66;
 }
 .main .container .products .product-item .product__text .price {
   font-family: "Bai Jamjuree", sans-serif;
   font-size: 18px;
   line-height: 22.5px;
   font-weight: 600;
-  color: #DC323C;
+  color: #e20c1a;
   margin-bottom: 0.8rem;
 }
 .main .container .products .product-item .product__text .price s {
   font-family: "Bai Jamjuree", sans-serif;
   font-size: 11px;
   line-height: 13.5px;
-  font-weight: 400;
-  color: rgba(81, 93, 102, 0.8274509804);
+  font-weight: 600;
+  color: #515d66;
 }
 .main .container .products .product-item .product__text .quantity .instock {
   font-family: "Bai Jamjuree", sans-serif;
@@ -640,10 +640,10 @@
   font-weight: 400;
 }
 .main .container .products .product-item .product__text .quantity .instock strong {
-  color: #212529;
+  color: rgba(33, 37, 41, 0.8470588235);
 }
 .main .container .products .product-item .product__text .quantity .instock span {
-  color: rgba(81, 93, 102, 0.8274509804);
+  color: #515d66;
 }
 .main .container .products .product-item:nth-child(3) {
   width: 466px;
@@ -677,7 +677,7 @@
   font-size: 16px;
   line-height: 20px;
   font-weight: 700;
-  border-bottom: 1px solid rgba(81, 93, 102, 0.8274509804);
+  border-bottom: 1px solid #515d66;
   padding-bottom: 0.8rem;
   letter-spacing: 0.5px;
 }
@@ -723,13 +723,13 @@
   color: white;
   width: 45px;
   text-align: center;
-  background-color: #DC323C;
+  background-color: #e20c1a;
   padding: 1rem 0.5rem;
 }
 .main .container .products .product-item:nth-child(3) .device {
   position: relative;
   height: 5px;
-  background-color: rgba(81, 93, 102, 0.8274509804);
+  background-color: #515d66;
   margin: 1.3rem 0 0.5rem 0;
   border-radius: 30px;
 }
@@ -741,7 +741,7 @@
   height: 5px;
   width: 330px;
   border-radius: 30px 0 0 30px;
-  background-color: #DC323C;
+  background-color: rgba(220, 50, 61, 0.8784313725);
 }
 .main .container .products .product-item:nth-child(3) .quantity {
   font-family: "Bai Jamjuree", sans-serif;
@@ -822,7 +822,7 @@
   max-width: 70%;
   padding: 1rem 2rem;
   border-radius: 50px;
-  border: 1px solid rgba(81, 93, 102, 0.8274509804);
+  border: 1px solid #515d66;
 }
 .main footer .col .btn__sub .btn__sub-blue {
   background-color: #2B38D1;
@@ -840,7 +840,7 @@
   font-weight: 500;
   padding-top: 2.5rem;
   padding-bottom: 2rem;
-  border-top: 1px solid rgba(81, 93, 102, 0.8274509804);
+  border-top: 1px solid #515d66;
 }
 @media screen and (max-width: 1024px) {
   .main .copyright {
