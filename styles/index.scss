@@ -61,12 +61,9 @@
       @include lg {
         flex: 15%;
         max-width: 15.5%;
-        img{
-        max-width: 100%;
-
+        img {
+          max-width: 100%;
         }
-
-
       }
     }
     &__sreach {
@@ -78,7 +75,6 @@
       @include xl {
         max-width: 382px;
         height: 29px;
-
       }
       @include lg {
         max-width: 282px;
@@ -91,7 +87,6 @@
         gap: 2rem;
         @include xl {
           @include textSize(700, 11px, 10.25px);
-          
         }
         @include lg {
           display: none;
@@ -116,7 +111,6 @@
         @include xl {
           @include textSize(400, 12px, 17.25px);
         }
-      
       }
       .btn__sreach {
         flex: 11%;
@@ -129,7 +123,6 @@
         @include xl {
           @include textSize(500, 12px, 17.25px);
           height: 29px;
-
         }
         @include lg {
           flex: 5%;
@@ -192,7 +185,7 @@
     @include xl {
       @include textSize(600, 12px, 14.25px);
     }
-  
+
     .menu__cate_list {
       @include flexCenter();
       flex: 1;
@@ -236,7 +229,7 @@
       }
     }
   }
-   // Body 
+  // Body
   .container {
     background-color: $bg-main;
     margin-top: 1.5rem;
@@ -265,7 +258,7 @@
           }
         }
       }
-      // Banner 
+      // Banner
       .banner {
         margin-top: 1rem;
         flex: calc(80% - 1rem);
@@ -327,129 +320,179 @@
     // Products css
     .products {
       margin-top: 3.5rem;
-      display: grid;
-      grid-template-columns: auto auto auto auto auto auto auto;
+      @include flexCenter;
       gap: 0.3rem;
-      @include xxl {
-        grid-template-columns: auto auto auto auto  ;
-      }
       @include xl {
-        grid-template-columns: auto auto auto ;
-      }
+        flex-wrap: wrap;
 
-      @include md {
-        grid-template-columns: auto;
-      }
+         }
+      .product-list {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.3rem;
+        flex: 1;
+        @include xl {
+          order: 2;
 
-      .product-item {
-        height: 373px;
-        
-        padding: 1rem 1.5rem;
-        background-color: rgb(255, 255, 255);
-        @include xxl {
-          width: 100%;
-          
         }
-        @include md {
-          width: 100%;
-        }
-        .product-img {
-          position: relative;
-          margin: auto;
-          .sale {
-            @include textSize(600, 12px, 15px);
-            position: absolute;
-            top: 4px;
-            left: 2px;
-            background-color: $bg-red;
-            color: white;
-            padding: 3px 10px;
-          }
-        }
-        .product__text {
-        width: 231px;
-
-          margin-top: 0.8rem;
-          .title {
-            @include textSize(600, 14px, 18px);
-          }
-          .star {
-            span {
-              @include textSize(500, 12px, 15px);
-              color: $gray-text;
+        .product-items {
+          display: flex;
+          gap: .3rem;
+          .product-item {
+            height: 373px;
+            max-width: 231px;
+            padding: 1rem 1.5rem;
+            background-color: rgb(255, 255, 255);
+            @include xl {
+            padding: 1rem 1rem;
             }
-            margin-top: 1rem;
-          }
-          .price {
-            @include textSize(600, 18px, 22.5px);
-            color: $red-color;
-            margin-bottom: 0.8rem;
-            s {
-              @include textSize(600, 11px, 13.5px);
-              color: $gray-text;
-            }
-          }
-          .quantity {
-            .instock {
-              @include textSize(400, 12px, 20px);
-              strong {
-                color: $main-text;
-              }
-              span {
-                color: $gray-text;
+            .product-img {
+              position: relative;
+              margin: auto;
+
+              .sale {
+                @include textSize(600, 12px, 15px);
+                position: absolute;
+                top: 4px;
+                left: 2px;
+                background-color: $bg-red;
+                color: white;
+                padding: 3px 10px;
               }
             }
+            .product__text {
+              margin-top: 1.7rem;
+              .title {
+                @include textSize(600, 14px, 18px);
+              }
+              .star {
+                display: flex;
+                gap: 0.5rem;
+                margin-top: 1rem;
+                margin-bottom: .2rem;
+                span {
+                  @include textSize(500, 12px, 15px);
+                  color: $gray-text;
+                }
+                img{
+                  height: 12px;
+                  
+                }
+              }
+              .price {
+                @include textSize(600, 18px, 22.5px);
+                color: $red-color;
+                margin-bottom: .8rem;
+                s {
+                  @include textSize(600, 11px, 13.5px);
+                  color: $gray-text;
+                }
+              }
+              .quantity {
+                display: flex;
+                align-items: center;
+                gap: .2rem;
+                flex: 1;
+                img{
+                  height: 10px;
+                  
+                }
+                .instock {
+                  @include textSize(400, 12px, 20px);
+                  strong {
+                    color: $main-text;
+                  }
+                  span {
+                    color: $gray-text;
+                  }
+                }
+              }
+            }
+            // Product countdown
           }
         }
-        // Product countdown
-        &:nth-child(3) {
-          width: 466px;
-          height: 751px;
-          grid-column: 3 / span 3;
-          grid-row: 1 / span 2;
-          padding: 2rem 2.5rem;
-          @include xxl {
-            grid-column: 1 / span 2;
-            grid-row: 1 / span 2;
-             width: 100%;
-                
-          }
-
+        &:nth-child(2) {
+          flex: 1;
+          display: block;
           @include xl {
-            grid-column: 1 / span 2;
-            grid-row: 1 / span 2;
-          }
-          @include md {
-            width: 100%;
+           order: 1;
+          flex: 100%;
 
-            grid-column: 1 / span 2;
-            grid-row: 1 / span 2;
+            }
+          .product-item {
+            height: 751px;
+            border: 2px solid $red-color;
+            background-color: white;
+            padding: 1.5rem 2.5rem;
+            @include xl {
+             @include flexCenter;
+             height: max-content;
+               }
           }
+
+
           .product-img {
+            position: relative;
             .product-offer {
               @include textSize(700, 16px, 20px);
 
               border-bottom: 1px solid $gray-text;
               padding-bottom: 0.8rem;
+              padding-top: 0.6rem;
               letter-spacing: 0.5px;
+              @include xl {
+                border-bottom:none;
+
+                  }
             }
             .img {
               margin-top: 1.2rem;
             }
             .gift {
               position: absolute;
-              top: 3.3rem;
+              top: 3.7rem;
               right: -0.2rem;
               width: 32px;
               height: 32px;
             }
             .sale {
-              top: 3.4rem;
-              left: 0.3rem;
+              @include textSize(600, 12px, 15px);
+              position: absolute;
+              top: 4rem;
+              left: .3rem;
+              background-color: $bg-red;
+              color: white;
+              padding: 3px 10px;
             }
           }
           .product__text {
-            margin-top: 0.9rem;
+            margin-top: 1rem;
+            .title {
+              @include textSize(600, 14px, 18px);
+            }
+            .star {
+              display: flex;
+              gap: 0.5rem;
+              margin-top: 1rem;
+              margin-bottom: .5rem;
+              span {
+                @include textSize(500, 12px, 15px);
+                color: $gray-text;
+              }
+              img{
+                height: 12px;
+                
+              }
+            }
+            .price {
+              @include textSize(600, 18px, 22.5px);
+              color: $red-color;
+              margin-bottom: 0.8rem;
+              s {
+                @include textSize(600, 11px, 13.5px);
+                color: $gray-text;
+              }
+            }
           }
           .countdown {
             margin-top: 1.2rem;
@@ -484,7 +527,7 @@
               left: 0;
               content: "";
               height: 5px;
-              width: 330px;
+              width: 70%;
               border-radius: 30px 0 0 30px;
               background-color: $bg-red;
             }
@@ -503,26 +546,25 @@
     padding-bottom: 2rem;
     gap: 3rem;
     @include lg {
-    @include flexCenter(center, flex-start);
+      @include flexCenter(center, flex-start);
 
-     flex-wrap: wrap;
-
-      }
+      flex-wrap: wrap;
+    }
 
     .col {
       max-width: 438px;
       @include lg {
-      width: 40%;
-      &:nth-child(4){
-        order: 2;
-      }
-      &:nth-child(2){
-        order: 4;
-        text-align: end;
-      }
-      &:nth-child(3){
-        text-align: end;
-      }
+        width: 40%;
+        &:nth-child(4) {
+          order: 2;
+        }
+        &:nth-child(2) {
+          order: 4;
+          text-align: end;
+        }
+        &:nth-child(3) {
+          text-align: end;
+        }
       }
 
       &__header {
@@ -563,24 +605,23 @@
     }
   }
   .copyright {
-    @include flexCenter(space-between,center);
+    @include flexCenter(space-between, center);
     @include textSize(500, 14px, 17.5px);
     padding-top: 2.5rem;
     padding-bottom: 2rem;
     border-top: 1px solid $gray-text;
-    @include lg{
-      @include flexCenter(center,center,$direction:column);
-
+    @include lg {
+      @include flexCenter(center, center, $direction: column);
     }
   }
-  .menu-mobile{
-    .list__item{
-      @include flexCenter(center,center,$direction:column);
+  .menu-mobile {
+    .list__item {
+      @include flexCenter(center, center, $direction: column);
       height: 100vh;
       gap: 2rem;
     }
     position: absolute;
-    top:0;
+    top: 0;
     left: 0;
     width: 200px;
     height: 100vh;

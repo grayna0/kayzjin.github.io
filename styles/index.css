@@ -5,6 +5,12 @@
   color: rgba(33, 37, 41, 0.8470588235);
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
 .btn {
   border-radius: 30px;
   border: none;
@@ -548,45 +554,48 @@
 }
 .main .container .products {
   margin-top: 3.5rem;
-  display: grid;
-  grid-template-columns: auto auto auto auto auto auto auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
   gap: 0.3rem;
-}
-@media screen and (max-width: 1500px) {
-  .main .container .products {
-    grid-template-columns: auto auto auto auto;
-  }
 }
 @media screen and (max-width: 1290px) {
   .main .container .products {
-    grid-template-columns: auto auto auto;
+    flex-wrap: wrap;
   }
 }
-@media screen and (max-width: 768px) {
-  .main .container .products {
-    grid-template-columns: auto;
+.main .container .products .product-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+  flex: 1;
+}
+@media screen and (max-width: 1290px) {
+  .main .container .products .product-list {
+    order: 2;
   }
 }
-.main .container .products .product-item {
+.main .container .products .product-list .product-items {
+  display: flex;
+  gap: 0.3rem;
+}
+.main .container .products .product-list .product-items .product-item {
   height: 373px;
+  max-width: 231px;
   padding: 1rem 1.5rem;
   background-color: rgb(255, 255, 255);
 }
-@media screen and (max-width: 1500px) {
-  .main .container .products .product-item {
-    width: 100%;
+@media screen and (max-width: 1290px) {
+  .main .container .products .product-list .product-items .product-item {
+    padding: 1rem 1rem;
   }
 }
-@media screen and (max-width: 768px) {
-  .main .container .products .product-item {
-    width: 100%;
-  }
-}
-.main .container .products .product-item .product-img {
+.main .container .products .product-list .product-items .product-item .product-img {
   position: relative;
   margin: auto;
 }
-.main .container .products .product-item .product-img .sale {
+.main .container .products .product-list .product-items .product-item .product-img .sale {
   font-family: "Bai Jamjuree", sans-serif;
   font-size: 12px;
   line-height: 15px;
@@ -598,27 +607,32 @@
   color: white;
   padding: 3px 10px;
 }
-.main .container .products .product-item .product__text {
-  width: 231px;
-  margin-top: 0.8rem;
+.main .container .products .product-list .product-items .product-item .product__text {
+  margin-top: 1.7rem;
 }
-.main .container .products .product-item .product__text .title {
+.main .container .products .product-list .product-items .product-item .product__text .title {
   font-family: "Bai Jamjuree", sans-serif;
   font-size: 14px;
   line-height: 18px;
   font-weight: 600;
 }
-.main .container .products .product-item .product__text .star {
+.main .container .products .product-list .product-items .product-item .product__text .star {
+  display: flex;
+  gap: 0.5rem;
   margin-top: 1rem;
+  margin-bottom: 0.2rem;
 }
-.main .container .products .product-item .product__text .star span {
+.main .container .products .product-list .product-items .product-item .product__text .star span {
   font-family: "Bai Jamjuree", sans-serif;
   font-size: 12px;
   line-height: 15px;
   font-weight: 500;
   color: #515d66;
 }
-.main .container .products .product-item .product__text .price {
+.main .container .products .product-list .product-items .product-item .product__text .star img {
+  height: 12px;
+}
+.main .container .products .product-list .product-items .product-item .product__text .price {
   font-family: "Bai Jamjuree", sans-serif;
   font-size: 18px;
   line-height: 22.5px;
@@ -626,82 +640,144 @@
   color: #e20c1a;
   margin-bottom: 0.8rem;
 }
-.main .container .products .product-item .product__text .price s {
+.main .container .products .product-list .product-items .product-item .product__text .price s {
   font-family: "Bai Jamjuree", sans-serif;
   font-size: 11px;
   line-height: 13.5px;
   font-weight: 600;
   color: #515d66;
 }
-.main .container .products .product-item .product__text .quantity .instock {
+.main .container .products .product-list .product-items .product-item .product__text .quantity {
+  display: flex;
+  align-items: center;
+  gap: 0.2rem;
+  flex: 1;
+}
+.main .container .products .product-list .product-items .product-item .product__text .quantity img {
+  height: 10px;
+}
+.main .container .products .product-list .product-items .product-item .product__text .quantity .instock {
   font-family: "Bai Jamjuree", sans-serif;
   font-size: 12px;
   line-height: 20px;
   font-weight: 400;
 }
-.main .container .products .product-item .product__text .quantity .instock strong {
+.main .container .products .product-list .product-items .product-item .product__text .quantity .instock strong {
   color: rgba(33, 37, 41, 0.8470588235);
 }
-.main .container .products .product-item .product__text .quantity .instock span {
+.main .container .products .product-list .product-items .product-item .product__text .quantity .instock span {
   color: #515d66;
 }
-.main .container .products .product-item:nth-child(3) {
-  width: 466px;
-  height: 751px;
-  grid-column: 3/span 3;
-  grid-row: 1/span 2;
-  padding: 2rem 2.5rem;
-}
-@media screen and (max-width: 1500px) {
-  .main .container .products .product-item:nth-child(3) {
-    grid-column: 1/span 2;
-    grid-row: 1/span 2;
-    width: 100%;
-  }
+.main .container .products .product-list:nth-child(2) {
+  flex: 1;
+  display: block;
 }
 @media screen and (max-width: 1290px) {
-  .main .container .products .product-item:nth-child(3) {
-    grid-column: 1/span 2;
-    grid-row: 1/span 2;
+  .main .container .products .product-list:nth-child(2) {
+    order: 1;
+    flex: 100%;
   }
 }
-@media screen and (max-width: 768px) {
-  .main .container .products .product-item:nth-child(3) {
-    width: 100%;
-    grid-column: 1/span 2;
-    grid-row: 1/span 2;
+.main .container .products .product-list:nth-child(2) .product-item {
+  height: 751px;
+  border: 2px solid #e20c1a;
+  background-color: white;
+  padding: 1.5rem 2.5rem;
+}
+@media screen and (max-width: 1290px) {
+  .main .container .products .product-list:nth-child(2) .product-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    height: -moz-max-content;
+    height: max-content;
   }
 }
-.main .container .products .product-item:nth-child(3) .product-img .product-offer {
+.main .container .products .product-list:nth-child(2) .product-img {
+  position: relative;
+}
+.main .container .products .product-list:nth-child(2) .product-img .product-offer {
   font-family: "Bai Jamjuree", sans-serif;
   font-size: 16px;
   line-height: 20px;
   font-weight: 700;
   border-bottom: 1px solid #515d66;
   padding-bottom: 0.8rem;
+  padding-top: 0.6rem;
   letter-spacing: 0.5px;
 }
-.main .container .products .product-item:nth-child(3) .product-img .img {
+@media screen and (max-width: 1290px) {
+  .main .container .products .product-list:nth-child(2) .product-img .product-offer {
+    border-bottom: none;
+  }
+}
+.main .container .products .product-list:nth-child(2) .product-img .img {
   margin-top: 1.2rem;
 }
-.main .container .products .product-item:nth-child(3) .product-img .gift {
+.main .container .products .product-list:nth-child(2) .product-img .gift {
   position: absolute;
-  top: 3.3rem;
+  top: 3.7rem;
   right: -0.2rem;
   width: 32px;
   height: 32px;
 }
-.main .container .products .product-item:nth-child(3) .product-img .sale {
-  top: 3.4rem;
+.main .container .products .product-list:nth-child(2) .product-img .sale {
+  font-family: "Bai Jamjuree", sans-serif;
+  font-size: 12px;
+  line-height: 15px;
+  font-weight: 600;
+  position: absolute;
+  top: 4rem;
   left: 0.3rem;
+  background-color: rgba(220, 50, 61, 0.8784313725);
+  color: white;
+  padding: 3px 10px;
 }
-.main .container .products .product-item:nth-child(3) .product__text {
-  margin-top: 0.9rem;
+.main .container .products .product-list:nth-child(2) .product__text {
+  margin-top: 1rem;
 }
-.main .container .products .product-item:nth-child(3) .countdown {
+.main .container .products .product-list:nth-child(2) .product__text .title {
+  font-family: "Bai Jamjuree", sans-serif;
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 600;
+}
+.main .container .products .product-list:nth-child(2) .product__text .star {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+}
+.main .container .products .product-list:nth-child(2) .product__text .star span {
+  font-family: "Bai Jamjuree", sans-serif;
+  font-size: 12px;
+  line-height: 15px;
+  font-weight: 500;
+  color: #515d66;
+}
+.main .container .products .product-list:nth-child(2) .product__text .star img {
+  height: 12px;
+}
+.main .container .products .product-list:nth-child(2) .product__text .price {
+  font-family: "Bai Jamjuree", sans-serif;
+  font-size: 18px;
+  line-height: 22.5px;
+  font-weight: 600;
+  color: #e20c1a;
+  margin-bottom: 0.8rem;
+}
+.main .container .products .product-list:nth-child(2) .product__text .price s {
+  font-family: "Bai Jamjuree", sans-serif;
+  font-size: 11px;
+  line-height: 13.5px;
+  font-weight: 600;
+  color: #515d66;
+}
+.main .container .products .product-list:nth-child(2) .countdown {
   margin-top: 1.2rem;
 }
-.main .container .products .product-item:nth-child(3) .countdown-date {
+.main .container .products .product-list:nth-child(2) .countdown-date {
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -709,13 +785,13 @@
   margin-top: 0.5rem;
   gap: 0.5rem;
 }
-.main .container .products .product-item:nth-child(3) .countdown-date strong {
+.main .container .products .product-list:nth-child(2) .countdown-date strong {
   font-family: "Bai Jamjuree", sans-serif;
   font-size: 20px;
   line-height: 25px;
   font-weight: 600;
 }
-.main .container .products .product-item:nth-child(3) .countdown-date .bg-red {
+.main .container .products .product-list:nth-child(2) .countdown-date .bg-red {
   font-family: "Bai Jamjuree", sans-serif;
   font-size: 14px;
   line-height: 17.25px;
@@ -726,24 +802,24 @@
   background-color: #e20c1a;
   padding: 1rem 0.5rem;
 }
-.main .container .products .product-item:nth-child(3) .device {
+.main .container .products .product-list:nth-child(2) .device {
   position: relative;
   height: 5px;
   background-color: #515d66;
   margin: 1.3rem 0 0.5rem 0;
   border-radius: 30px;
 }
-.main .container .products .product-item:nth-child(3) .device::after {
+.main .container .products .product-list:nth-child(2) .device::after {
   position: absolute;
   top: 0;
   left: 0;
   content: "";
   height: 5px;
-  width: 330px;
+  width: 70%;
   border-radius: 30px 0 0 30px;
   background-color: rgba(220, 50, 61, 0.8784313725);
 }
-.main .container .products .product-item:nth-child(3) .quantity {
+.main .container .products .product-list:nth-child(2) .quantity {
   font-family: "Bai Jamjuree", sans-serif;
   font-size: 12px;
   line-height: 20px;
